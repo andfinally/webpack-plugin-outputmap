@@ -15,7 +15,7 @@ module.exports = class OutputMapPlugin {
 			// [ 'blocks/index.98a08c137038f434e9ed.min.js', 'blocks/validation.468fdc39c28306626e0d.min.js' ]
 			const assets = Object.keys(stats.compilation.assets);
 			assets.forEach((asset) => {
-				const re = /^([\w\/]+)(\.[a-z0-9]+)(\.min\.js)$/gi;
+				const re = /^([\w\/]+)(\.[a-z0-9]+)(\.min\.[a-z0-9]{2,3})$/gi;
 				const key = asset.replace(re, '$1$3');
 				map[key] = asset;
 			});
