@@ -1,5 +1,5 @@
 const { resolve } = require('path');
-const OutputMapPlugin = require('./outputmap-webpack-plugin');
+const OutputMapPlugin = require('./webpack-plugin-asset-map');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
